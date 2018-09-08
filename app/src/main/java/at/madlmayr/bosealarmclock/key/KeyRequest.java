@@ -1,26 +1,27 @@
 package at.madlmayr.bosealarmclock.key;
 
-
-// Not yet sure if this is the way to handle the XML Parsing on Android.
-// https://stackoverflow.com/questions/5514752/xml-element-with-attribute-and-content-using-jaxb
-// https://github.com/google/google-http-java-client/blob/dev/google-http-client-xml/src/test/java/com/google/api/client/xml/XmlTest.java
-
 import com.google.api.client.util.Key;
+
+/**
+ * Request Object for the '/key' HTTP-POST Request. Requires the Key as well as the Key State
+ */
 
 public class KeyRequest {
 
-    public final static String ELEMENT_NAME = "key";
+    public static final String ELEMENT_NAME = "key";
 
+    // This value is always "Gabbo" - see documentation.
     @Key("@sender")
     private final String sender ="Gabbo";
     @Key("text()")
-    private final String value;
+    private final String key;
     @Key("@state")
-    private String state;
+    private String keyState;
 
-    public KeyRequest(final String value, final String state) {
-        this.state = state;
-        this.value = value;
+
+    public KeyRequest(final String key, final String keyState) {
+        this.keyState = keyState;
+        this.key = key;
     }
 
 }

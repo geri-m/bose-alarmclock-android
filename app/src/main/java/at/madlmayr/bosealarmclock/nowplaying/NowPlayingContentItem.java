@@ -2,6 +2,10 @@ package at.madlmayr.bosealarmclock.nowplaying;
 
 import com.google.api.client.util.Key;
 
+/**
+ * Content Item of the NowPlaying Response.
+ */
+
 public class NowPlayingContentItem {
 
     @Key("@source")

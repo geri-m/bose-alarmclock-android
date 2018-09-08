@@ -1,5 +1,9 @@
 package at.madlmayr.bosealarmclock.key;
 
+/**
+ * Enum for the current state of a button of the Sound Touch
+ */
+
 public enum KeyStateEnum {
 
     // the key states _MUST_ be lower case.

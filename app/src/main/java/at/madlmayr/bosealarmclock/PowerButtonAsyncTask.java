@@ -19,6 +19,10 @@ import at.madlmayr.bosealarmclock.key.KeyStateEnum;
 import at.madlmayr.bosealarmclock.nowplaying.NowPlayingResponse;
 import at.madlmayr.bosealarmclock.nowplaying.SourceEnum;
 
+/**
+ * Async Tasks for Powering on the SoundTouch if it is not running.
+ */
+
 public class PowerButtonAsyncTask extends AbstractAsyncTask {
 
     // We don't have a namespace for our Application and/or the objects. Soundtouch doesn't like it.
@@ -37,7 +41,6 @@ public class PowerButtonAsyncTask extends AbstractAsyncTask {
     @Override
     protected void doInBackground() throws IOException {
 
-        // https://github.com/google/google-http-java-client/blob/dev/google-http-client-xml/src/test/java/com/google/api/client/xml/XmlTest.java
         final NowPlayingResponse nowPlayingResponse = factory.buildGetRequest(getNowPlaying).setParser(new XmlObjectParser(DICTIONARY)).execute().parseAs(NowPlayingResponse.class);
 
         // If we are in Standby, start the SoundTouch
