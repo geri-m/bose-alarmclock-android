@@ -19,18 +19,11 @@
         tools:layout_editor_absoluteY="8dp">
 
         <Button
-            android:id="@+id/on_button"
+            android:id="@+id/power_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="turnOn"
-            android:text="@string/on_button" />
-
-        <Button
-            android:id="@+id/off_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="turnOff"
-            android:text="@string/off_button" />
+            android:onClick="pressPower"
+            android:text="@string/power_button" />
 
 
     </LinearLayout>

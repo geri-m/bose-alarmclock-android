@@ -17,15 +17,10 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate");
     }
 
-    public void turnOn(final View view) {
-        Log.i(TAG, "turnOn");
+    public void pressPower(final View view) {
+        Log.i(TAG, "pressPower");
         new PowerButtonAsyncTask().execute();
 
 
-    }
-
-    public void turnOff(final View view) {
-        Log.i(TAG, "turnOff");
-        new PowerButtonAsyncTask().execute();
     }
 }
