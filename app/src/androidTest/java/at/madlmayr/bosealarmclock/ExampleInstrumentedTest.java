@@ -1,4 +1,4 @@
-package madlmayr.at.bosealarmclock;
+package at.madlmayr.bosealarmclock;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

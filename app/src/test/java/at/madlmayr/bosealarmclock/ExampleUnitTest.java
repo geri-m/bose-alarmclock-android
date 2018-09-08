@@ -1,4 +1,4 @@
-package madlmayr.at.bosealarmclock;
+package at.madlmayr.bosealarmclock;
 
 import org.junit.Test;
 
