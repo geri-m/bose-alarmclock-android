@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock;
+package at.madlmayr.bosealarmclock.key;
 
 
 // Not yet sure if this is the way to handle the XML Parsing on Android.
@@ -7,8 +7,9 @@ package at.madlmayr.bosealarmclock;
 
 import com.google.api.client.util.Key;
 
-public class KeyObject {
+public class KeyRequest {
 
+    public final static String ELEMENT_NAME = "key";
 
     @Key("@sender")
     private final String sender ="Gabbo";
@@ -17,7 +18,7 @@ public class KeyObject {
     @Key("@state")
     private String state;
 
-    public KeyObject(final String value, final String state){
+    public KeyRequest(final String value, final String state) {
         this.state = state;
         this.value = value;
     }
