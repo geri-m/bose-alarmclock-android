@@ -48,7 +48,7 @@ public class PowerButtonAsyncTask extends AbstractAsyncTask {
             nowPlayingRequest.getHeaders().setAcceptEncoding("gzip, deflate").setAccept("*/*");
             nowPlayingRequest.setParser(new XmlObjectParser(DICTIONARY));
             final NowPlayingResponse nowPlayingResponse = nowPlayingRequest.execute().parseAs(NowPlayingResponse.class);
-            Log.i(MainActivity.TAG, nowPlayingResponse.getContentItem().getSource());
+            Log.i(MainActivity.TAG, nowPlayingResponse.getContentItem().getSource().toString());
 
             final XmlHttpContent contentPowerStep1 = new XmlHttpContent(DICTIONARY, KeyRequest.ELEMENT_NAME, new KeyRequest(KeyPressAndReleaseEnum.POWER.name(), KeyStateEnum.PRESS.getValue()));
             final HttpRequest requestStep1 = factory.buildPostRequest(postKey, contentPowerStep1);

@@ -5,14 +5,13 @@ import com.google.api.client.util.Key;
 public class NowPlayingContentItem {
 
     @Key("@source")
-    private String source;
+    private SourceEnum source;
 
     public NowPlayingContentItem() {
 
     }
 
-
-    public String getSource() {
+    public SourceEnum getSource() {
         return source;
     }
 }
