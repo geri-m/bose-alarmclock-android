@@ -1,4 +1,4 @@
-package madlmayr.at.bosealarmclock;
+package org.soundtouch4j.bosealarmclock;
 
 import org.junit.Test;
 
