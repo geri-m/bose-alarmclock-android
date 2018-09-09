@@ -73,5 +73,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void searchForSpeaker(final View view) {
         Log.i(TAG, "searchForSpeaker");
+        new SearchAsyncTask().execute();
     }
 }
