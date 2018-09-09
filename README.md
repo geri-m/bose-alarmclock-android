@@ -39,3 +39,10 @@ to the ```build.gradle```. The 'exclude'  I have found in the example: https://g
 There is a nice example on how to use the Android Alarm Clock and the Android References
 - https://www.codingconnect.net/android-application-creates-alarm-clock/
 - https://developer.android.com/reference/android/provider/AlarmClock
+
+## Discovery
+
+Initially I as looking int mDNS (Jmdns) as there is an example on github. (https://github.com/janschraepen/soundtouch/blob/master/src/main/java/eu/bose/soundtouch/mdns/Discoverer3.java)
+I wasn't successful with this approach. After some research I used SSDP as there as Library that
+works out of the box on Android (https://github.com/resourcepool/ssdp-client). The library is open
+source as well an maintained activity
