@@ -11,13 +11,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity android:name=".MainActivity">
-            <intent-filter>
+
+
+            <intent-filter android:label="@string/bose_filter_title">
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.madlmayr.at/bose-alarmclock” -->
+                <data
+                    android:host="www.madlmayr.at"
+                    android:pathPrefix="/bose-alarmclock"
+                    android:scheme="http" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+                <!-- Accepts URIs that begin with "example://madlmayr.at” -->
+                <data
+                    android:host="madlmayr.at"
+                    android:scheme="bose-alarmclock" />
+
             </intent-filter>
         </activity>
+        <receiver android:name=".AlarmReceiver"></receiver>
     </application>
 
 </manifest>
