@@ -65,4 +65,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "ALARM is set to OFF", Toast.LENGTH_SHORT).show();
         }
     }
+
+    /**
+     * Method that is triggered from the UI to start searching for the Speakers
+     *
+     * @param view View passed from the GUI
+     */
+    public void searchForSpeaker(final View view) {
+        Log.i(TAG, "searchForSpeaker");
+    }
 }

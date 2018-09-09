@@ -20,4 +20,13 @@
         android:checked="false"
         android:onClick="pressToggle" />
 
+
+    <ToggleButton
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:onClick="searchForSpeaker"
+        android:text="@string/search_for_speaker" />
+
 </LinearLayout>
