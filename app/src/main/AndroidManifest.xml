@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity android:name=".MainActivity">
-
-
             <intent-filter android:label="@string/bose_filter_title">
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +35,7 @@
 
             </intent-filter>
         </activity>
-        <receiver android:name=".AlarmReceiver"></receiver>
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>
