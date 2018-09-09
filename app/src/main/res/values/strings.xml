@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Bose AlarmClock</string>
     <string name="power_button">Power</string>
+    <string name="bose_filter_title">Filter Title for Google</string>
 </resources>
