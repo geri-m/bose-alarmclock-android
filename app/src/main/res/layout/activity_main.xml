@@ -20,13 +20,4 @@
         android:checked="false"
         android:onClick="pressToggle" />
 
-
-    <Button
-        android:id="@+id/power_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="pressPower"
-        android:text="@string/power_button" />
-
-
 </LinearLayout>

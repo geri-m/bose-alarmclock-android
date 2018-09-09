@@ -8,9 +8,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Checkable;
 import android.widget.TimePicker;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import java.util.Calendar;
 
@@ -31,17 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate successfully completed");
     }
 
-
-    /**
-     * Callback from the GUI when pressing the "Power" button
-     *
-     * @param view View passed from the GUI
-     */
-    public void pressPower(final View view) {
-        Log.i(TAG, "pressPower");
-        new PowerButtonAsyncTask().execute();
-    }
-
     /**
      * Callback from the GUI when pressing the "Toggle" button
      *
@@ -52,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
     @SuppressWarnings("deprecation")
     public void pressToggle(final View view) {
         long time;
-        if (((ToggleButton) view).isChecked()) {
-            Toast.makeText(MainActivity.this, "ALARM ON", Toast.LENGTH_SHORT).show();
+        if (((Checkable) view).isChecked()) {
+            Toast.makeText(MainActivity.this, "ALARM is set to ON", Toast.LENGTH_SHORT).show();
             final Calendar calendar = Calendar.getInstance();
 
             // These Methods are deprecated since API Level 23. We are target 21, so we are good.
@@ -73,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, time, 10000, pendingIntent);
         } else {
             alarmManager.cancel(pendingIntent);
-            Toast.makeText(MainActivity.this, "ALARM OFF", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "ALARM is set to OFF", Toast.LENGTH_SHORT).show();
         }
     }
 }
