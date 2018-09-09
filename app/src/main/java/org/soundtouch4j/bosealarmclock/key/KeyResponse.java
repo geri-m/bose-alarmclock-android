@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock.key;
+package org.soundtouch4j.bosealarmclock.key;
 
 import com.google.api.client.util.Key;
 

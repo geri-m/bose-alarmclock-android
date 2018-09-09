@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="at.madlmayr.bosealarmclock">
+    package="org.soundtouch4j.bosealarmclock">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -22,15 +22,15 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "http://www.madlmayr.at/bose-alarmclock” -->
+                <!-- Accepts URIs that begin with "http://www.soundtouch4j.at/bose-alarmclock” -->
                 <data
-                    android:host="www.madlmayr.at"
+                    android:host="www.soundtouch4j.org"
                     android:pathPrefix="/bose-alarmclock"
                     android:scheme="http" />
                 <!-- note that the leading "/" is required for pathPrefix-->
-                <!-- Accepts URIs that begin with "example://madlmayr.at” -->
+                <!-- Accepts URIs that begin with "example://soundtouch4j.at” -->
                 <data
-                    android:host="madlmayr.at"
+                    android:host="soundtouch4j.org"
                     android:scheme="bose-alarmclock" />
 
             </intent-filter>

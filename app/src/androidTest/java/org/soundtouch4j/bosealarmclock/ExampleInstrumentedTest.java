@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock;
+package org.soundtouch4j.bosealarmclock;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("madlmayr.at.bosealarmclock", appContext.getPackageName());
+        assertEquals("org.soundtouch4j.bosealarmclock", appContext.getPackageName());
     }
 }

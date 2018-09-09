@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock;
+package org.soundtouch4j.bosealarmclock;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

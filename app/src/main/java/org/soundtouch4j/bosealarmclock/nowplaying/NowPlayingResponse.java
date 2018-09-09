@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock.nowplaying;
+package org.soundtouch4j.bosealarmclock.nowplaying;
 
 
 import com.google.api.client.util.Key;

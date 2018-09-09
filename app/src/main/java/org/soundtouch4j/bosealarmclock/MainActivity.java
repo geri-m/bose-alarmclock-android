@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock;
+package org.soundtouch4j.bosealarmclock;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

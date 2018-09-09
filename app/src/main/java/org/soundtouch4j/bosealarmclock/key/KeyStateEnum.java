@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock.key;
+package org.soundtouch4j.bosealarmclock.key;
 
 /**
  * Enum for the current state of a button of the Sound Touch

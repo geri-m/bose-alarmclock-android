@@ -1,4 +1,4 @@
-package at.madlmayr.bosealarmclock;
+package org.soundtouch4j.bosealarmclock;
 
 import android.util.Log;
 
@@ -12,12 +12,12 @@ import com.google.api.client.xml.XmlObjectParser;
 
 import java.io.IOException;
 
-import at.madlmayr.bosealarmclock.key.KeyPressAndReleaseEnum;
-import at.madlmayr.bosealarmclock.key.KeyRequest;
-import at.madlmayr.bosealarmclock.key.KeyResponse;
-import at.madlmayr.bosealarmclock.key.KeyStateEnum;
-import at.madlmayr.bosealarmclock.nowplaying.NowPlayingResponse;
-import at.madlmayr.bosealarmclock.nowplaying.SourceEnum;
+import org.soundtouch4j.bosealarmclock.key.KeyPressAndReleaseEnum;
+import org.soundtouch4j.bosealarmclock.key.KeyRequest;
+import org.soundtouch4j.bosealarmclock.key.KeyResponse;
+import org.soundtouch4j.bosealarmclock.key.KeyStateEnum;
+import org.soundtouch4j.bosealarmclock.nowplaying.NowPlayingResponse;
+import org.soundtouch4j.bosealarmclock.nowplaying.SourceEnum;
 
 /**
  * Async Tasks for Powering on the SoundTouch if it is not running.
