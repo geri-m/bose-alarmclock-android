@@ -9,13 +9,19 @@ import com.google.api.client.util.Key;
  * <p>
  * Standby
  * ======
+ * <pre>
+ * {@code
  * <?xml version="1.0" encoding="UTF-8" ?>
  * <nowPlaying deviceID="C8DF84AE0B6E" source="STANDBY">
  * <ContentItem source="STANDBY" isPresetable="true" />
  * </nowPlaying>
+ * }
+ * </pre>
  * <p>
  * Playing (eg. INTERNET_RADIO)
  * <p>
+ * <pre>
+ * {@code
  * <?xml version="1.0" encoding="UTF-8" ?>
  * <nowPlaying deviceID="C8DF84AE0B6E" source="INTERNET_RADIO">
  * <ContentItem source="INTERNET_RADIO" location="45289" sourceAccount="" isPresetable="true">
@@ -31,6 +37,8 @@ import com.google.api.client.util.Key;
  * <description>MP3  128 kbps  Internet Only,  www.deephouselounge.com is an underground house and electronic dance music radio station / community.</description>
  * <stationLocation>Internet Only</stationLocation>
  * </nowPlaying>
+ * }
+ * </pre>
  */
 
 public class NowPlayingResponse {

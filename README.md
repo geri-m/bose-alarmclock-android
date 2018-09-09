@@ -34,5 +34,8 @@ Therefore I'm adding
 
 to the ```build.gradle```. The 'exclude'  I have found in the example: https://github.com/google/google-api-java-client-samples/blob/master/tasks-android-sample/build.gradle
 
+## Android Alarm Clock
 
-
+There is a nice example on how to use the Android Alarm Clock and the Android References
+- https://www.codingconnect.net/android-application-creates-alarm-clock/
+- https://developer.android.com/reference/android/provider/AlarmClock

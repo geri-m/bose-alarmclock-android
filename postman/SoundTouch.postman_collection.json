@@ -34,7 +34,7 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/xml"
+						"value": "text/xml"
 					}
 				],
 				"body": {
@@ -65,12 +65,12 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/xml"
+						"value": "text/xml"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "<key state=\"press\" sender=\"Gabbo\">POWER</key>"
+					"raw": "<key state=\"release\" sender=\"Gabbo\">POWER</key>"
 				},
 				"url": {
 					"raw": "http://soundtouch-20.fritz.box:8090/key",
@@ -86,6 +86,28 @@
 					]
 				},
 				"description": "For the POWER value entry, it is important that you send two /key POST messages in rapid succession. The first should set state to be \"press\", and the second should set state to be \"release\". Sending only one command (either \"press\" or \"release\") will produce inconsistent results for some SoundTouch products."
+			},
+			"response": []
+		},
+		{
+			"name": "Now Playing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://soundtouch-20.fritz.box:8090/now_playing",
+					"protocol": "http",
+					"host": [
+						"soundtouch-20",
+						"fritz",
+						"box"
+					],
+					"port": "8090",
+					"path": [
+						"now_playing"
+					]
+				}
 			},
 			"response": []
 		}
