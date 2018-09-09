@@ -21,7 +21,7 @@ public class SearchAsyncTask extends AbstractAsyncTask {
         client.discoverServices(networkStorageDevice, new DiscoveryListener() {
             @Override
             public void onServiceDiscovered(final SsdpService service) {
-                Log.i(MainActivity.TAG, "Found service: " + service);
+                Log.i(MainActivity.TAG, "Found service at IP: " + service.getRemoteIp().toString());
             }
 
             @Override
@@ -30,10 +30,19 @@ public class SearchAsyncTask extends AbstractAsyncTask {
             }
 
             @Override
-            public void onFailed(Exception ex) {
+            public void onFailed(final Exception ex) {
                 Log.i(MainActivity.TAG, "Service onFailed: " + ex.getMessage());
             }
         });
 
+        // We can do that for now, as we are on a separate thread anyway. Not nice, but does the job.
+        try {
+            Thread.sleep(10000);
+        } catch (final InterruptedException e) {
+            Log.e(MainActivity.TAG, "Error on Sleep");
+        }
+
+        Log.i(MainActivity.TAG, "Discovery Stopped");
+        client.stopDiscovery();
     }
 }
