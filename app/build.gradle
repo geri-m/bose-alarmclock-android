@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
 }
 
 dependencies {
@@ -28,6 +33,11 @@ dependencies {
         exclude   module: 'commons-logging'
     }
     implementation ('com.google.http-client:google-http-client-xml:1.25.0' ) {
+        exclude  module: 'httpclient'
+        exclude  module: 'xpp3'
+        exclude   module: 'commons-logging'
+    }
+    implementation ('org.soundtouch4j:soundtouch4j-api:1.0.0-SNAPSHOT') {
         exclude  module: 'httpclient'
         exclude  module: 'xpp3'
         exclude   module: 'commons-logging'

@@ -10,7 +10,6 @@ import io.resourcepool.ssdp.model.SsdpServiceAnnouncement;
 
 public class SearchAsyncTask extends AbstractAsyncTask {
 
-
     @Override
     protected void doInBackground() {
 

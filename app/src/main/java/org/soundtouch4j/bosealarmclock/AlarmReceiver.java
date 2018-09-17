@@ -13,6 +13,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent intent) {
         Log.i(MainActivity.TAG, "Alarm Triggered");
-        new PowerButtonAsyncTask().execute();
+        new PowerAlarmAsyncTask().execute();
     }
 }

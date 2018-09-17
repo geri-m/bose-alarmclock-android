@@ -67,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Method to turn off/on speaker
+     *
+     * @param view View passed from the GUI
+     */
+    public void powerButton(final View view) {
+        Log.i(TAG, "pressPower");
+        new PowerButtonAsyncTask().execute();
+    }
+
+    /**
      * Method that is triggered from the UI to start searching for the Speakers
      *
      * @param view View passed from the GUI
