@@ -8,14 +8,20 @@ import io.resourcepool.ssdp.model.DiscoveryRequest;
 import io.resourcepool.ssdp.model.SsdpService;
 import io.resourcepool.ssdp.model.SsdpServiceAnnouncement;
 
+/**
+ * {@link android.os.AsyncTask} to do a search for Bose SoundTouch Speakers via SSDP.
+ */
+
 public class SearchAsyncTask extends AbstractAsyncTask {
+
+    private static final String BOSE_URN = "urn:schemas-upnp-org:device:MediaRenderer:1";
+    private static final int SCAN_DURATION_IN_MS = 5000;
 
     @Override
     protected void doInBackground() {
-
         final SsdpClient client = SsdpClient.create();
         final DiscoveryRequest networkStorageDevice = DiscoveryRequest.builder()
-                .serviceType("urn:schemas-upnp-org:device:MediaRenderer:1")
+                .serviceType(BOSE_URN)
                 .build();
         client.discoverServices(networkStorageDevice, new DiscoveryListener() {
             @Override
@@ -25,23 +31,20 @@ public class SearchAsyncTask extends AbstractAsyncTask {
 
             @Override
             public void onServiceAnnouncement(final SsdpServiceAnnouncement announcement) {
-                Log.i(MainActivity.TAG, "Service announced something: " + announcement);
+
             }
 
             @Override
             public void onFailed(final Exception ex) {
-                Log.i(MainActivity.TAG, "Service onFailed: " + ex.getMessage());
+
             }
         });
 
-        // We can do that for now, as we are on a separate thread anyway. Not nice, but does the job.
+        // Thread-Sleep is not nice, although AsyncTask
         try {
-            Thread.sleep(10000);
+            Thread.sleep(SCAN_DURATION_IN_MS);
         } catch (final InterruptedException e) {
-            Log.e(MainActivity.TAG, "Error on Sleep");
+            // ignore
         }
-
-        Log.i(MainActivity.TAG, "Discovery Stopped");
-        client.stopDiscovery();
     }
 }

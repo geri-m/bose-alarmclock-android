@@ -12,6 +12,7 @@ public abstract class AbstractAsyncTask extends AsyncTask<Void, Void, Boolean> {
     // For Local Testing.
     // private static final String BASE_PATH = "http://geralds-mbp.fritz.box:1234/";
     // Static URL to my SoundTouch. Yes I'm owning a Fritzbox ;)
+    // TODO: Switch to SSDP Search
     protected static final String BASE_PATH = "http://soundtouch-20.fritz.box:8090";
 
     @Override

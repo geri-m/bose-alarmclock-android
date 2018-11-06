@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 /**
- * Alarm Receive that gets triggered/receives the Intent on the Alaram we have.
+ * Alarm Receive that gets triggered/receives the {@link Intent} on the Alarm we have.
  */
 
 public class AlarmReceiver extends BroadcastReceiver {

@@ -32,6 +32,9 @@ dependencies {
         exclude  module: 'xpp3'
         exclude  module: 'commons-logging'
     }
+    // can be removed again with Google's HTTP Lib 1.26.1
+    implementation 'com.google.guava:guava:21.0'
+    implementation 'commons-codec:commons-codec:1.10'
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.android.support.test:runner:1.0.2'
     testImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

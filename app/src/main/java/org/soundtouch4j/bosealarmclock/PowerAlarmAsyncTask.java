@@ -2,7 +2,7 @@ package org.soundtouch4j.bosealarmclock;
 
 import android.util.Log;
 
-import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.http.javanet.NetHttpTransport;
 
 import org.soundtouch4j.SoundTouch;
 import org.soundtouch4j.SoundTouchApi;
@@ -20,7 +20,7 @@ public class PowerAlarmAsyncTask extends AbstractAsyncTask {
 
     @Override
     protected void doInBackground() throws IOException, SoundTouchApiException {
-        final SoundTouch api = new SoundTouchApi(new URL(BASE_PATH), AndroidHttp.newCompatibleTransport());
+        final SoundTouch api = new SoundTouchApi(new URL(BASE_PATH), new NetHttpTransport());
         // If we are in Standby, start the SoundTouch
         if (api.getNowPlayingApi().nowPlaying().isInStandbyMode()) {
             Log.i(MainActivity.TAG, "SoundTouch in Standby, Power on");
