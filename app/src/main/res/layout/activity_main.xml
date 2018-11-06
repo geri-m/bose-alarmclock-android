@@ -28,4 +28,11 @@
         android:onClick="searchForSpeaker"
         android:text="@string/search_for_speaker" />
 
+    <Button
+        android:id="@+id/powerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="powerButton"
+        android:text="@string/power_button" />
+
 </LinearLayout>
