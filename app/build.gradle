@@ -27,20 +27,10 @@ dependencies {
     implementation 'io.resourcepool:ssdp-client:2.2.0'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation ('com.google.http-client:google-http-client-android:1.25.0')  {
-        exclude  module: 'httpclient'
-        exclude   module: 'xpp3'
-        exclude   module: 'commons-logging'
-    }
-    implementation ('com.google.http-client:google-http-client-xml:1.25.0' ) {
+    implementation ('org.soundtouch4j:soundtouch4j-api:1.0.6') {
         exclude  module: 'httpclient'
         exclude  module: 'xpp3'
-        exclude   module: 'commons-logging'
-    }
-    implementation ('org.soundtouch4j:soundtouch4j-api:1.0.0-SNAPSHOT') {
-        exclude  module: 'httpclient'
-        exclude  module: 'xpp3'
-        exclude   module: 'commons-logging'
+        exclude  module: 'commons-logging'
     }
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.android.support.test:runner:1.0.2'
