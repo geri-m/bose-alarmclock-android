@@ -2,39 +2,18 @@
 
 Create an Android Alarm Clock that triggers a Bose SoundTouch Product to Start playing.
 
-## Research
+## SoundTouch4J
 
-I was unable to find a wrapper for Java for the API. Not too tricky to implement. Elements in the XML 
-are lower case with is a bit strange. Values of Elements and Values of Attributes of the XML are case 
-sensitive.
-
-## HTTP Client Lib
-
-For the REST Calls I'm trying the Google HTTP Client Library. I've not used this before, but I want 
-to try something new anyway. It also supports XML as Body Format (but is beta), but hey: no risk no fun.
-
-This is a helpful example for the XML Usage of the Lib.
-```
-https://github.com/google/google-http-java-client/blob/dev/google-http-client-xml/src/test/java/com/google/api/client/xml/XmlTest.java
-```
-
-Therefore I'm adding 
+In order to interact with the Bose Speaker, you can use the SoundTouch4J library (http://soundtouch4j.org).
 
 ```
-    implementation ('com.google.http-client:google-http-client-android:1.25.0')  {
-        exclude  module: 'httpclient'
-        exclude   module: 'xpp3'
-        exclude   module: 'commons-logging'
-    }
-    implementation ('com.google.http-client:google-http-client-xml:1.25.0' ) {
-        exclude  module: 'httpclient'
-        exclude  module: 'xpp3'
-        exclude   module: 'commons-logging'
-    }
+implementation ('org.soundtouch4j:soundtouch4j-api:1.0.6') {
+    exclude  module: 'httpclient'
+    exclude  module: 'xpp3'
+    exclude  module: 'commons-logging'
+}
 ```
-
-to the ```build.gradle```. The 'exclude'  I have found in the example: https://github.com/google/google-api-java-client-samples/blob/master/tasks-android-sample/build.gradle
-
+    
 ## Android Alarm Clock
 
 There is a nice example on how to use the Android Alarm Clock and the Android References
@@ -53,5 +32,5 @@ source as well and maintained activity
 Dependency for SSDP Library
 
 ```
-    implementation 'io.resourcepool:ssdp-client:2.2.0'
+implementation 'io.resourcepool:ssdp-client:2.2.0'
 ```
